@@ -13,7 +13,13 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <div>
-      <h1>Yihua´s Thoughts</h1>
+      <h1>Fabian´s Thoughts</h1>
+      <h4>
+        {data.allMarkdownRemark.totalCount} Posts till now{" "}
+        <span role="img" aria-label="happy-face">
+          😊
+        </span>
+      </h4>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <Link to={node.fields.slug} style={styles.link}>
